@@ -1,21 +1,24 @@
 #! /bin/bash
 
-echo "welcome to EmployeeWage"
-
+echo "welcome to Employee Wage"
 IS_PRESENT=1
+EMP_RATE_PER_HR=20
 
 #variable
 check=$(( $RANDOM%2 ))
 
-#condition
 if [ $check -eq $IS_PRESENT ]
 then
-        echo "employee is present"
+        echo "present"
+        empHrs=8
 else
-        echo "employee is absent"
+        echo "absent"
+        empHrs=0
 fi
+salary=$(( $EMP_RATE_PER_HR * $empHrs ))
 
-echo "testing"
+
+
 
 
 
